@@ -1,0 +1,6 @@
+ <% @items_list.each do |itemx| %>
+        <div class="item">
+          <img class="thumbnail" src="<%=itemx.thumbnail_url%>" alt="<%=itemx.thumbnail_alt%>">
+          <a class="link-text" href="<%=itemx.link_url%>" target="_blank"><strong><%=itemx.link_period%></strong>: <%=itemx.link_description%></a> 
+        </div>        
+<% end %>

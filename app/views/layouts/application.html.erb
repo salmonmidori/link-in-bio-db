@@ -8,9 +8,111 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    
+      <meta charset="UTF-8">
+      
+      <!-- Social media icon source: https://fontawesome.com/ -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
+      <!--Font source: fonts.google.com-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Bentham&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+      
+        <style>
+      /* * {
+       border: 1px red solid;
+      } */
+      html {
+       min-height: 100%;
+      }
+      body {
+        min-height: 100%;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background: radial-gradient(circle at 50% 50%, #ffe799, #ffd38c, #ffbe81, #ffa878, #ff8b70, #ff767b, #ff6b95, #ff61b5); /* Tool: https://www.learnui.design/tools/gradient-generator.html */
+        color: rgb(0, 0, 0);
+      }
+      a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+      }
+      .main-container {
+       max-width: 640px;
+       margin: auto;
+      }
+      .avatar-image {
+        width: 128px;
+        height: 128px;
+        object-fit: cover;
+        border-radius: 128px;
+        border: #d75858 10px solid;
+      }
+      .item {
+        background-color: rgba(183, 42, 42, 0.676);
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center; 
+        border-radius: 1000px;
+        padding: 5px;
+        padding-right: 53px;
+        box-shadow: 4px 4px 10px 0px rgba(122,32,122,0.5);
+      }
+      .thumbnail {
+        width: 48px;
+        height: 48px;
+        border-radius: 48px;
+        object-fit: cover;
+      }
+      .image-row {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .name-row {
+        margin-bottom: 30px;
+        text-align: center;
+        font-size: 36px;
+        font-family: "Bentham", serif;
+        font-weight: 590;
+        font-style: normal;
+      }
+
+      .social-icons-row {
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: space-evenly;
+        font-family: "Bentham", serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .link-text {
+        text-align: center;
+        flex-grow: 1;
+        font-family: "Montserrat", serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        
+      }
+    </style>
   </head>
 
   <body>
+
+   <div class="main-container">
+      <div class="image-row">
+        <img class="avatar-image" src="me_professional.jpg" alt="My professional headshot"> 
+      </div>
+      <div class="name-row">
+        Amy May Nguyen
+      </div>
+      <div class="social-icons-row">
+        <a style="color: black" href="https://github.com/salmonmidori" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+        <a style="color: black" href="https://www.linkedin.com/amymaynguyen" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        <a style="color: black" href="https://www.instagram.com/bluemidori" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+      </div>
+
     <%= yield %>
   </body>
 </html>
